@@ -1,0 +1,93 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	background-image: url(../img/paper.png);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font: 16px/1 "Tangerine";
+	color: #212121;
+	padding: 15px;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #212121;
+}
+
+.flex {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: relative;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.flex-item-center {
+	align-self: center;
+}
+
+.flex-item-bottom {
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+
+.quote {
+	text-align: center;
+	font-size: 2em;
+}
+
+.typed-cursor {
+	opacity: 0;
+}
+
+.fa {
+	margin: 4px;
+}
+
+.fa-random {
+	transition: 0.8s;
+}
+
+.fa-random:hover {
+	transform: rotate3d(45, 0, 0, 180deg);
+}
+
+.fa-language {
+	transition: 0.8s;
+}
+
+.fa-language:hover {
+	transform: rotate3d(0, 45, 0, 180deg);
+}
+
+.fa-twitter,
+.fa-github-alt {
+	transition: 0.5s;
+}
+
+.fa-twitter:hover {
+	transform: scale(1.1);
+	color: #1da1f2;
+}
+
+.fa-github-alt:hover {
+	transform: scale(1.1);
+	color: #4078c0;
+}
