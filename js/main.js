@@ -28,7 +28,7 @@ var QuoteMachine = function () {
         value: function displayQuote(scope, json) {
             scope.quoteText = json.quoteText + " - " + (json.quoteAuthor || "Anonymous");
             scope.$div.fadeOut(500, function () {
-                $(this).fadeIn(500).typed({
+                return scope.$div.fadeIn(500).typed({
                     strings: [scope.quoteText],
                     typeSpeed: 25,
                     backDelay: 750
