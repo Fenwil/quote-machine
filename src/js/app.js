@@ -31,7 +31,7 @@ class QuoteMachine {
         $.getJSON(url)
             .done(function (json) {
                 _this.quoteText = json[0].Translated
-                _this.$div.text(quoteText).fadeIn(500)
+                _this.$div.text(_this.quoteText).fadeIn(500)
             })
             .fail(function () {
                 _this.$quoteDiv.text("We couldn't translate it. I'm sorry :(")
@@ -43,7 +43,7 @@ class QuoteMachine {
     }
 }
 
-$(function () {
+$(() => {
 
     let quoteMachine = new QuoteMachine()
 
