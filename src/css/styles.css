@@ -1,3 +1,36 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot?h63vna');
+	src: url('../fonts/icomoon.eot?h63vna#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?h63vna') format('truetype'), url('../fonts/icomoon.woff?h63vna') format('woff'), url('../fonts/icomoon.svg?h63vna#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-random:before {
+	content: "\f074";
+}
+
+.icon-twitter:before {
+	content: "\f099";
+}
+
+.icon-language:before {
+	content: "\f1ab";
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -5,8 +38,11 @@
 }
 
 html {
-	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -16,11 +52,8 @@ body {
 	font: 16px/1 "Tangerine";
 	color: #212121;
 	padding: 15px;
-}
-
-html,
-body {
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 }
 
 a {
@@ -49,37 +82,18 @@ a {
 	opacity: 0;
 }
 
-.fa {
+.icon {
 	margin: 4px;
 }
 
-.fa-random {
+.icon-random {
 	transition: 0.8s;
 }
 
-.fa-random:hover {
-	transform: rotate3d(45, 0, 0, 180deg);
-}
-
-.fa-language {
+.icon-language {
 	transition: 0.8s;
 }
 
-.fa-language:hover {
-	transform: rotate3d(0, 45, 0, 180deg);
-}
-
-.fa-twitter,
-.fa-github-alt {
+.icon-twitter {
 	transition: 0.5s;
-}
-
-.fa-twitter:hover {
-	transform: scale(1.1);
-	color: #1da1f2;
-}
-
-.fa-github-alt:hover {
-	transform: scale(1.1);
-	color: #4078c0;
 }
