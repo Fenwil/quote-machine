@@ -27,9 +27,7 @@ class QuoteMachine {
               this.quoteText = json[0].Translated
               this.$div.text(this.quoteText).fadeIn(500)
             })
-            .fail(() => {
-              this.$quoteDiv.text("We couldn't translate it. I'm sorry :(")
-            })
+            .fail(() => this.$quoteDiv.text("We couldn't translate it. I'm sorry :("))
   }
   tweetQuote () {
     let linkTweet = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(this.quoteText)
