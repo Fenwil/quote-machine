@@ -53,13 +53,18 @@ body {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 }
 
 a {
 	text-decoration: none;
 	color: #212121;
+}
+
+.quote {
+	text-align: center;
+	font-size: 2em;
 }
 
 .bottom-box {
@@ -68,10 +73,6 @@ a {
 	right: 15px;
 }
 
-.quote {
-	text-align: center;
-	font-size: 2em;
-}
 
 .typed-cursor {
 	opacity: 0;

@@ -49,7 +49,7 @@ var QuoteMachine = function () {
         _this3.quoteText = json[0].Translated;
         _this3.$div.text(_this3.quoteText).fadeIn(500);
       }).fail(function () {
-        _this3.$quoteDiv.text("We couldn't translate it. I'm sorry :(");
+        return _this3.$quoteDiv.text("We couldn't translate it. I'm sorry :(");
       });
     }
   }, {

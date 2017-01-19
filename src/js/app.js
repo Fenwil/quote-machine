@@ -6,28 +6,28 @@ class QuoteMachine {
   }
   getQuote () {
     $.getJSON(this.apiUrl)
-            .done(json => this.displayQuote(json))
-            .fail(() => this.$quoteDiv.text("We couldn't get any quote. I'm sorry :("))
+      .done(json => this.displayQuote(json))
+      .fail(() => this.$quoteDiv.text("We couldn't get any quote. I'm sorry :("))
   }
   displayQuote (json) {
     this.quoteText = json.quoteText + ' - ' + (json.quoteAuthor || 'Anonymous')
     this.$div.fadeOut(500, () =>
-            this.$div.fadeIn(500).typed({
-              strings: [this.quoteText],
-              typeSpeed: 25,
-              backDelay: 750
-            })
-        )
+      this.$div.fadeIn(500).typed({
+        strings: [this.quoteText],
+        typeSpeed: 25,
+        backDelay: 750
+      })
+    )
   }
   translateQuote () {
     let targetLang = 'es'
     let url = 'http://api.grimmstudios.biz/translate/' + targetLang + '/' + encodeURIComponent(this.quoteText)
     $.getJSON(url)
-            .done((json) => {
-              this.quoteText = json[0].Translated
-              this.$div.text(this.quoteText).fadeIn(500)
-            })
-            .fail(() => this.$quoteDiv.text("We couldn't translate it. I'm sorry :("))
+      .done((json) => {
+        this.quoteText = json[0].Translated
+        this.$div.text(this.quoteText).fadeIn(500)
+      })
+      .fail(() => this.$quoteDiv.text("We couldn't translate it. I'm sorry :("))
   }
   tweetQuote () {
     let linkTweet = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(this.quoteText)
